@@ -10,7 +10,7 @@ class TestCancelledTransferEvent extends TestCase
 {
     public function testMoneyTransferCancelled(): void
     {
-        $transfer=Transfer::find(3);
+        $transfer=Transfer::find(21);
         event(new TransferCancelled($transfer));
         $data = [
             'id' => 2,
